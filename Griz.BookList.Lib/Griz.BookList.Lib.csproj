@@ -66,12 +66,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Griz.Core\Griz.Core.csproj">
-      <Project>{BFD059CA-205D-4239-9128-D67D9961960F}</Project>
-      <Name>Griz.Core</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Migrations\201209172344536_InitialCreate.resx">
       <DependentUpon>201209172344536_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>

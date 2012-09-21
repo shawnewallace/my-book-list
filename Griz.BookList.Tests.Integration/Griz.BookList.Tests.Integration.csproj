@@ -56,10 +56,6 @@
       <Project>{722F9B35-E7CD-4EFE-BC2F-549564FBC991}</Project>
       <Name>Griz.BookList.Lib</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Griz.Core\Griz.Core.csproj">
-      <Project>{BFD059CA-205D-4239-9128-D67D9961960F}</Project>
-      <Name>Griz.Core</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
