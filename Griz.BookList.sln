@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Griz.Core", "Griz.Core\Griz.Core.csproj", "{BFD059CA-205D-4239-9128-D67D9961960F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Griz.BookList.Lib", "Griz.BookList.Lib\Griz.BookList.Lib.csproj", "{722F9B35-E7CD-4EFE-BC2F-549564FBC991}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Griz.BookList.Tests.Integration", "Griz.BookList.Tests.Integration\Griz.BookList.Tests.Integration.csproj", "{A2EF131F-F778-41BB-8930-77BF99BB5BB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Griz.BookList.Web", "Griz.BookList.Web\Griz.BookList.Web.csproj", "{03913413-38D3-477E-8F93-18E93F4CF37A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Griz.BookList.Web.Tests", "Griz.BookList.Web.Tests\Griz.BookList.Web.Tests.csproj", "{20AB730F-8F86-48E3-8C8A-655B48A42ED9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{0C0FEA5C-BCDC-434A-B605-B5B40D69A79E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BFD059CA-205D-4239-9128-D67D9961960F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFD059CA-205D-4239-9128-D67D9961960F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFD059CA-205D-4239-9128-D67D9961960F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFD059CA-205D-4239-9128-D67D9961960F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{722F9B35-E7CD-4EFE-BC2F-549564FBC991}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{722F9B35-E7CD-4EFE-BC2F-549564FBC991}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{722F9B35-E7CD-4EFE-BC2F-549564FBC991}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{722F9B35-E7CD-4EFE-BC2F-549564FBC991}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2EF131F-F778-41BB-8930-77BF99BB5BB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2EF131F-F778-41BB-8930-77BF99BB5BB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2EF131F-F778-41BB-8930-77BF99BB5BB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2EF131F-F778-41BB-8930-77BF99BB5BB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03913413-38D3-477E-8F93-18E93F4CF37A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03913413-38D3-477E-8F93-18E93F4CF37A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03913413-38D3-477E-8F93-18E93F4CF37A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03913413-38D3-477E-8F93-18E93F4CF37A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20AB730F-8F86-48E3-8C8A-655B48A42ED9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20AB730F-8F86-48E3-8C8A-655B48A42ED9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20AB730F-8F86-48E3-8C8A-655B48A42ED9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20AB730F-8F86-48E3-8C8A-655B48A42ED9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A2EF131F-F778-41BB-8930-77BF99BB5BB5} = {0C0FEA5C-BCDC-434A-B605-B5B40D69A79E}
+		{20AB730F-8F86-48E3-8C8A-655B48A42ED9} = {0C0FEA5C-BCDC-434A-B605-B5B40D69A79E}
+	EndGlobalSection
+EndGlobal
