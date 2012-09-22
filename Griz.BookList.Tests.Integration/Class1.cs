@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Griz.BookList.Lib;
+using Griz.BookList.Lib.Data;
+using Griz.BookList.Lib.Models;
 using NUnit.Framework;
 
 namespace Griz.BookList.Tests.Integration

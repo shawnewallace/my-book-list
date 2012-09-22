@@ -7,6 +7,8 @@ using System.Web.Mvc;
 using System.Web.Security;
 using DotNetOpenAuth.AspNet;
 using Griz.BookList.Lib;
+using Griz.BookList.Lib.Data;
+using Griz.BookList.Lib.Models;
 using Griz.Core;
 using Microsoft.Web.WebPages.OAuth;
 using WebMatrix.WebData;

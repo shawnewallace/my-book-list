@@ -4,6 +4,7 @@ using System.Data.Entity.Infrastructure;
 using System.Threading;
 using System.Web.Mvc;
 using Griz.BookList.Lib;
+using Griz.BookList.Lib.Data;
 using WebMatrix.WebData;
 using Griz.BookList.Web.Models;
 
