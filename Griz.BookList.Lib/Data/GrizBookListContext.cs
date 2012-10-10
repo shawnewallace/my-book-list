@@ -5,7 +5,7 @@ namespace Griz.BookList.Lib.Data
 {
 	public class GrizBookListContext : DbContext
 	{
-		public GrizBookListContext() : base("DefaultConnection")
+		public GrizBookListContext() : base("MyBookList")
 		{
 		}
 
