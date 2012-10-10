@@ -1,0 +1,52 @@
+﻿@model System.Collections.Generic.List<Griz.BookList.Lib.Models.Book>
+
+<form action="/book/add">
+	<input type="text" id="name" name="name" />
+	<input type="submit" value="Add" />
+</form>
+
+
+<ol id="sortable">
+	@foreach(var book in Model.OrderBy(b => b.DisplayOrder))
+	{
+		<li data-id="@book.Id">
+			<div>
+				@book.Name
+				<input type="button" value="remove" class="remove-book-button" data-id="@book.Id" />
+			</div>
+		</li>
+	}
+</ol>
+
+@section scripts{
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$(".remove-book-button").live("click", function () {
+				var id = $(this).attr("data-id");
+				$.ajax({
+					url: "/book/delete?id=" + id,
+					type: "DELETE"
+				}).done(function (data) {
+					if (data == true) {
+						$("li[data-id=" + id + "]").fadeOut("slow");
+						$("li[data-id=" + id + "]").remove();
+					}
+					else {
+						alert("bad");
+					}
+				});
+			});
+
+			$("#sortable").sortable({
+				update: function (event, ui) {
+					$.ajax({
+						url: "/book/delete?id=" + $(ui.item).attr("data-id") + "&pos=" + ui.item.index(),
+						type: "POST"
+					}).done(function () {
+						//alert("done");
+					});
+				}
+			});
+		});
+	</script>
+}

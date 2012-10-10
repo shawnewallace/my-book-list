@@ -19,8 +19,12 @@ namespace Griz.BookList.Web.Controllers
 {
 	[Authorize]
 	[InitializeSimpleMembership]
-	public class AccountController : Controller
+	public class AccountController : BaseController
 	{
+		public AccountController(IUserProfileRepository profileRepo): base(profileRepo)
+		{
+		}
+
 		//
 		// GET: /Account/Login
 
@@ -57,6 +61,7 @@ namespace Griz.BookList.Web.Controllers
 		public ActionResult LogOff()
 		{
 			WebSecurity.Logout();
+			CurrentUser = null;
 
 			return RedirectToAction("Index", "Home");
 		}
@@ -346,7 +351,7 @@ namespace Griz.BookList.Web.Controllers
 			}
 			else
 			{
-				return RedirectToAction("Index", "Home");
+				return RedirectToAction("Index", "Book");
 			}
 		}
 
