@@ -8,7 +8,7 @@ namespace Griz.BookList.Lib.Migrations
         public override void Up()
         {
             CreateTable(
-                "dbo.user_profile",
+                "dbo.user_profiles",
                 c => new
                     {
                         id = c.Int(nullable: false, identity: true),
@@ -30,7 +30,7 @@ namespace Griz.BookList.Lib.Migrations
                         when_modified = c.DateTime(nullable: false),
                     })
                 .PrimaryKey(t => t.id)
-                .ForeignKey("dbo.user_profile", t => t.user_profile_id, cascadeDelete: true)
+                .ForeignKey("dbo.user_profiles", t => t.user_profile_id, cascadeDelete: true)
                 .Index(t => t.user_profile_id);
             
         }
@@ -38,9 +38,9 @@ namespace Griz.BookList.Lib.Migrations
         public override void Down()
         {
             DropIndex("dbo.books", new[] { "user_profile_id" });
-            DropForeignKey("dbo.books", "user_profile_id", "dbo.user_profile");
+            DropForeignKey("dbo.books", "user_profile_id", "dbo.user_profiles");
             DropTable("dbo.books");
-            DropTable("dbo.user_profile");
+            DropTable("dbo.user_profiles");
         }
     }
 }

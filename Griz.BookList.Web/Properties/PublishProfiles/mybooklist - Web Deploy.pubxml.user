@@ -10,7 +10,4 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAfaeUWo57F02Q+n4ZxbRwjAAAAAACAAAAAAAQZgAAAAEAACAAAACQ7DQ1yubCe+K7Q2RnNI/qkyL9weFi5f8fnfHAn14+NgAAAAAOgAAAAAIAACAAAAAFrGPVYUorjLCfM6iVjnRqmqt++IPiAvlANu+5xnpsrYAAAACd4VqoRMOYz1cQN5MVym/crUzDBc3tkVhvi2icpNqw5Xuk9AaYJUPxUR7sV1M7gNhWMVCgOulXOkV+mQQayX9eJ6vWODHETY5SRowAHB7Ax8Ixe3ge101X23YoW03yRRhmp9781/JC89u4pUlsiIqZWBI8JsOCpp6Y1xknbBGoAUAAAAAP8wTXgsBeF9tyE3aa4QcCzrfB0yy4mZS37GPH854c3cxWeljFF5rggzN37SqNokI8hD/I8t/gxGTeUmTrLc2D</EncryptedPassword>
   </PropertyGroup>
-	<PropertyGroup>
-		<_Enable45Check>false</_Enable45Check>
-	</PropertyGroup>
 </Project>

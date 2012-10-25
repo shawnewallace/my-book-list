@@ -7,12 +7,12 @@ namespace Griz.BookList.Lib.Migrations
     {
         public override void Up()
         {
-            RenameTable(name: "dbo.user_profile", newName: "user_profiles");
+            //RenameTable(name: "dbo.user_profile", newName: "user_profiles");
         }
         
         public override void Down()
         {
-            RenameTable(name: "dbo.user_profiles", newName: "user_profile");
+            //RenameTable(name: "dbo.user_profiles", newName: "user_profile");
         }
     }
 }

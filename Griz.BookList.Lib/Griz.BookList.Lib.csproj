@@ -66,6 +66,12 @@
     <Compile Include="Data\GrizBookListContext.cs" />
     <Compile Include="Data\GrizBookListUnitOfWork.cs" />
     <Compile Include="Data\RepositoryModule.cs" />
+    <Compile Include="Migrations\201209180021244_ChangeUserProfileTableName.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Migrations\201209180021244_ChangeUserProfileTableName.Designer.cs">
+      <DependentUpon>201209180021244_ChangeUserProfileTableName.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Book.cs" />
     <Compile Include="Models\UserProfile.cs" />
     <Compile Include="Migrations\201209172344536_InitialCreate.cs" />
@@ -75,10 +81,6 @@
     <Compile Include="Migrations\201209172353430_AddDisplayOrderToBooks.cs" />
     <Compile Include="Migrations\201209172353430_AddDisplayOrderToBooks.Designer.cs">
       <DependentUpon>201209172353430_AddDisplayOrderToBooks.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201209180021244_ChangeUserProfileTableName.cs" />
-    <Compile Include="Migrations\201209180021244_ChangeUserProfileTableName.Designer.cs">
-      <DependentUpon>201209180021244_ChangeUserProfileTableName.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

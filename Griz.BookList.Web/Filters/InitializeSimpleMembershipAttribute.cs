@@ -40,7 +40,7 @@ namespace Griz.BookList.Web.Filters
 						}
 					}
 
-					WebSecurity.InitializeDatabaseConnection("DefaultConnection", "user_profiles", "id", "user_name", autoCreateTables: true);
+					WebSecurity.InitializeDatabaseConnection("MyBookList", "user_profiles", "id", "user_name", autoCreateTables: true);
 				}
 				catch (Exception ex)
 				{

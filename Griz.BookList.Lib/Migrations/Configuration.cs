@@ -29,14 +29,14 @@ namespace Griz.BookList.Lib.Migrations
 						new UserProfile { UserName = "rowan_miller" }
 					);
 
-					context.Books.AddOrUpdate(
-						b => b.Name,
-						new Book{ Name = "War and Peace", UserProfileId = 1 },
-						new Book { Name = "The Hobbit (Or There and Back Again)", UserProfileId = 1 },
-						new Book { Name = "The Fellowship of the Ring", UserProfileId = 1 },
-						new Book { Name = "The Two Towers", UserProfileId = 1 },
-						new Book { Name = "The Return of the King", UserProfileId = 1 }
-						);
+					//context.Books.AddOrUpdate(
+					//	b => b.Name,
+					//	new Book{ Name = "War and Peace", UserProfileId = 1 },
+					//	new Book { Name = "The Hobbit (Or There and Back Again)", UserProfileId = 1 },
+					//	new Book { Name = "The Fellowship of the Ring", UserProfileId = 1 },
+					//	new Book { Name = "The Two Towers", UserProfileId = 1 },
+					//	new Book { Name = "The Return of the King", UserProfileId = 1 }
+					//	);
         }
     }
 }
