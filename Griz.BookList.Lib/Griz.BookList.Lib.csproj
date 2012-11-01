@@ -66,11 +66,17 @@
     <Compile Include="Data\GrizBookListContext.cs" />
     <Compile Include="Data\GrizBookListUnitOfWork.cs" />
     <Compile Include="Data\RepositoryModule.cs" />
+    <Compile Include="Extensions\IShiftable.cs" />
+    <Compile Include="Extensions\ListShifter.cs" />
     <Compile Include="Migrations\201209180021244_ChangeUserProfileTableName.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Migrations\201209180021244_ChangeUserProfileTableName.Designer.cs">
       <DependentUpon>201209180021244_ChangeUserProfileTableName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201210301937348_AddIsReadFlagToBooks.cs" />
+    <Compile Include="Migrations\201210301937348_AddIsReadFlagToBooks.Designer.cs">
+      <DependentUpon>201210301937348_AddIsReadFlagToBooks.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Book.cs" />
     <Compile Include="Models\UserProfile.cs" />
@@ -99,7 +105,11 @@
     <EmbeddedResource Include="Migrations\201209180021244_ChangeUserProfileTableName.resx">
       <DependentUpon>201209180021244_ChangeUserProfileTableName.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201210301937348_AddIsReadFlagToBooks.resx">
+      <DependentUpon>201210301937348_AddIsReadFlagToBooks.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

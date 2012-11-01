@@ -7,7 +7,7 @@ namespace Griz.BookList.Lib.Data
 {
 	public interface IBookRepository : IRepository<Book, int>
 	{
-		List<Book> GetByUserProfileId(int id);
+		List<Book> GetByUserProfileId(int id, bool includeRead = false);
 	}
 
 	public class BookRepository : EfRepository<Book, int>, IBookRepository
@@ -16,7 +16,7 @@ namespace Griz.BookList.Lib.Data
 		{
 		}
 
-		public List<Book> GetByUserProfileId(int id)
+		public List<Book> GetByUserProfileId(int id, bool includeRead = false)
 		{
 			return Where(b => b.UserProfileId == id).ToList();
 		}

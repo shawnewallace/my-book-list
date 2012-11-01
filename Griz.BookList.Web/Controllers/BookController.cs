@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using Griz.BookList.Lib.Data;
 using Griz.Core;
+using Griz.BookList.Lib.Extensions;
 
 namespace Griz.BookList.Web.Controllers
 {
@@ -79,33 +80,16 @@ namespace Griz.BookList.Web.Controllers
 			return Json(true);
 		}
 
-		private List<Lib.Models.Book> MoveBookInList(int id, int newPosition, List<Lib.Models.Book> oldList)
+		private List<Lib.Models.Book> MoveBookInList(int id
+			, int newPosition
+			, List<Lib.Models.Book> oldList)
 		{
-			var itemToMove = oldList.Where(b => b.Id == id).FirstOrDefault();
-			if (itemToMove == null) return oldList;
-
-			var oldIndex = itemToMove.DisplayOrder;
-			if (oldIndex == newPosition) return oldList;
-
-			var factor = (oldIndex < newPosition) ? -1 : 1;
-
-			if (factor > 0)
+			var shifter = new ListShifter<Lib.Models.Book, int>
 			{
-				foreach(var thing in oldList.Where(b => b.DisplayOrder >= newPosition && b.DisplayOrder <= oldIndex))
-				{
-					thing.DisplayOrder += factor;
-				}
-			}
-			else
-			{
-				foreach(var thing in oldList.Where(b => b.DisplayOrder <= newPosition && b.DisplayOrder >= oldIndex))
-				{
-					thing.DisplayOrder += factor;
-				}
-			}
-
-			itemToMove.DisplayOrder = newPosition;
-			return oldList;
+				ListToShift = oldList
+			};
+			
+			return shifter.Shift(id, newPosition);
 		}
 
 		private bool BookOwnedByProfile(int bookId, int profileId)

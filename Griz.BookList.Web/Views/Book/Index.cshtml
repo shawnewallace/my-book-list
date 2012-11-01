@@ -40,7 +40,7 @@
 			$("#sortable").sortable({
 				update: function (event, ui) {
 					$.ajax({
-						url: "/book/delete?id=" + $(ui.item).attr("data-id") + "&pos=" + ui.item.index(),
+						url: "/book/update?id=" + $(ui.item).attr("data-id") + "&pos=" + ui.item.index(),
 						type: "POST"
 					}).done(function () {
 						//alert("done");
