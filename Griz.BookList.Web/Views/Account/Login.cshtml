@@ -6,6 +6,10 @@
 
 }
 
+
+	@Styles.Render("~/Content/css")
+	@Scripts.Render("~/bundles/modernizr")
+
 <hgroup class="title">
     <h1>@ViewBag.Title.</h1>
 </hgroup>
@@ -34,7 +38,7 @@
                 @Html.LabelFor(m => m.RememberMe, new { @class = "checkbox" })
             </li>
         </ol>
-        <input type="submit" value="Log in" />
+        <input type="submit" value="Log in" class="btn btn-primary" />
     </fieldset>
     <p>
         @Html.ActionLink("Register", "Register") if you don't have an account.
@@ -48,5 +52,7 @@
 </section>
 
 @section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
+	@Scripts.Render("~/bundles/jquery")
+	<script type="text/javascript" src="~/Scripts/jquery-ui-1.8.24.custom.min.js"></script>
+  @Scripts.Render("~/bundles/jqueryval")
 }

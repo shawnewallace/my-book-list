@@ -2,7 +2,7 @@
 
 <form action="/book/add">
 	<input type="text" id="name" name="name" />
-	<input type="submit" value="Add" />
+	<input type="submit" class="btn btn-large btn-primary" value="Add" />
 </form>
 
 
@@ -12,7 +12,7 @@
 		<li data-id="@book.Id">
 			<div>
 				@book.Name
-				<input type="button" value="remove" class="remove-book-button" data-id="@book.Id" />
+				<input type="button" value="remove" class="btn btn-mini btn-danger remove-book-button" data-id="@book.Id" />
 			</div>
 		</li>
 	}
