@@ -1,3 +1,0 @@
-[submodule "externals/griz.core"]
-	path = externals/griz.core
-	url = git@github.com:shawnewallace/griz_core.git

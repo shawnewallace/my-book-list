@@ -18,8 +18,8 @@ namespace Griz.Core.Tests.Unit.Griz.BookList.Lib.Tests.ExtensionsTests
 	[TestFixture]
 	public class list_shifter_base
 	{
-		protected List<IShiftableEntity> _listToShift;
-		protected ListShifter _shifter;
+		protected List<IShiftable> _listToShift;
+		protected ListShifter<ShiftableEntity, int> _shifter;
 
 		[SetUp]
 		public void SetUp()

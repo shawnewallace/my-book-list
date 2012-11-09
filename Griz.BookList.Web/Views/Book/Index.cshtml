@@ -1,7 +1,7 @@
 ﻿@model System.Collections.Generic.List<Griz.BookList.Lib.Models.Book>
 
 <form action="/book/add">
-	<input type="text" id="name" name="name" />
+	<input type="text" id="name" name="name" class="span6 book-search" placeholder="What book do you want to read? (Adds to the end of your list.)" />
 	<input type="submit" class="btn btn-large btn-primary" value="Add" />
 </form>
 
@@ -10,10 +10,7 @@
 	@foreach(var book in Model.OrderBy(b => b.DisplayOrder))
 	{
 		<li data-id="@book.Id">
-			<div>
-				@book.Name
-				<input type="button" value="remove" class="btn btn-mini btn-danger remove-book-button" data-id="@book.Id" />
-			</div>
+			@Html.Partial("_Book", book)
 		</li>
 	}
 </ol>
