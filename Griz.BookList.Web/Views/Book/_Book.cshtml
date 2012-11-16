@@ -1,14 +1,13 @@
 ﻿@model Griz.BookList.Lib.Models.Book
 
-<div>
+<div class="book-in-list">
 	@Model.Name
-	<div class="btn-group">
-		@*<button class="btn btn-mini">Things you can do</button>*@
+	<div class="btn-group pull-right">
 		<button class="btn btn-mini dropdown-toggle" data-toggle="dropdown">
 			<span class="caret"></span>
 		</button>
 		<ul class="dropdown-menu">
-			<li><a href="#" class="" data-id="@Model.Id">Start/Finish Reading</a></li>
+			<li><a href="#" class="disabled" data-id="@Model.Id">Start/Finish Reading</a></li>
 			<li><a href="#" class="" data-id="@Model.Id">Edit</a></li>
 			<li><a href="#" class="" data-id="@Model.Id">Purchase</a></li>
 			<li><a href="#" class="" data-id="@Model.Id">Move</a></li>

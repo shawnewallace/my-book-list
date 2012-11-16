@@ -7,7 +7,7 @@ using Griz.Core;
 
 namespace Griz.BookList.Lib.Extensions
 {
-	public class ListShifter<T, TKey> where T : IId<TKey>, IShiftable
+	public class ListShifter<T, TKey> where T : IShiftable<TKey>
 	{
 		public List<T> ListToShift { get; set; }
 		public List<T> Shift(TKey idToShift, int zeroIndexedNewPosition)

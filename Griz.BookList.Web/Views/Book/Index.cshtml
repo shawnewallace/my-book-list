@@ -1,19 +1,26 @@
 ﻿@model System.Collections.Generic.List<Griz.BookList.Lib.Models.Book>
 
-<form action="/book/add">
-	<input type="text" id="name" name="name" class="span6 book-search" placeholder="What book do you want to read? (Adds to the end of your list.)" />
-	<input type="submit" class="btn btn-large btn-primary" value="Add" />
-</form>
-
-
-<ol id="sortable">
-	@foreach(var book in Model.OrderBy(b => b.DisplayOrder))
-	{
-		<li data-id="@book.Id">
-			@Html.Partial("_Book", book)
-		</li>
-	}
-</ol>
+<div class="row-fluid">
+	<form action="/book/add">
+		<input type="text" id="name" name="name" class="span6 book-search" placeholder="What book do you want to read? (Adds to the end of your list.)" />
+		<input type="submit" class="btn btn-large btn-primary" value="Add" />
+	</form>
+</div>
+<div class="row-fluid">
+	<div class="span8">
+		<div class="list-of-books content">
+			<h4>Reading List</h4>
+			<ul id="sortable">
+				@foreach(var book in Model.OrderBy(b => b.DisplayOrder))
+				{
+					<li data-id="@book.Id">
+						@Html.Partial("_Book", book)
+					</li>
+				}
+			</ul>
+		</div>
+	</div>
+</div>
 
 @section scripts{
 	<script type="text/javascript">

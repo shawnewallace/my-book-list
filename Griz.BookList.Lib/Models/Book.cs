@@ -5,7 +5,7 @@ using Griz.BookList.Lib.Extensions;
 namespace Griz.BookList.Lib.Models
 {
 	[Table("books")]
-	public class Book : EntityBase<int>, IShiftable
+	public class Book : EntityBase<int>, IShiftable<int>
 	{
 		[Column("display_order")]
 		public int DisplayOrder { get; set; }

@@ -9,7 +9,7 @@ using Griz.Core;
 
 namespace Griz.Core.Tests.Unit.Griz.BookList.Lib.Tests.ExtensionsTests
 {
-	public class ShiftableEntity :  IId<int>, IShiftable
+	public class ShiftableEntity : IShiftable<int>
 	{
 		public int Id { get; set; }
 		public int DisplayOrder { get; set; }
@@ -18,14 +18,14 @@ namespace Griz.Core.Tests.Unit.Griz.BookList.Lib.Tests.ExtensionsTests
 	[TestFixture]
 	public class list_shifter_base
 	{
-		protected List<IShiftable> _listToShift;
+		protected List<ShiftableEntity> _listToShift;
 		protected ListShifter<ShiftableEntity, int> _shifter;
 
 		[SetUp]
 		public void SetUp()
 		{
-			_listToShift = new List<IShiftableEntity>();
-			_shifter = new ListShifter();
+			_listToShift = new List<ShiftableEntity>();
+			_shifter = new ListShifter<ShiftableEntity, int>();
 		}
 	}
 
