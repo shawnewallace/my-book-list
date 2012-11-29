@@ -1,26 +1,41 @@
 ﻿@if (Request.IsAuthenticated)
 {
-	<text>
-	Logged in as @Html.ActionLink(User.Identity.Name
-						, "Manage"
-						, "Account"
-						, routeValues: null
-						, htmlAttributes: new { @class = "username", title = "Manage" }).
+	<ul class="nav pull-right">
+		<li class="dropdown">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+				Welcome, @User.Identity.Name
+				<b class="caret"></b>
+			</a>
+			<ul class="dropdown-menu">
+				<li>
+					<i class="icon-cog"></i>
+					@Html.ActionLink("Preferences"
+					                 , "Manage"
+					                 , "Account"
+					                 , routeValues: null
+					                 , htmlAttributes: new {@class = "username", title = "Manage"})
+				</li>
+				<li class="divider"></li>
+				<li>
+					<a href="javascript:document.getElementById('logoutForm').submit()">Log off</a>
+				</li>
+			</ul>
+		</li>
+	</ul>
 
-	<a href="javascript:document.getElementById('logoutForm').submit()">Log off</a>
 
-   @using (Html.BeginForm("LogOff"
-						, "Account"
-						, FormMethod.Post
-						, new { id = "logoutForm", @class = "navbar-form pull-right" }))
-	 {
-		 @Html.AntiForgeryToken()
-		 
-	 }
-	</text>
-	 return;
+	using (Html.BeginForm("LogOff"
+	                      , "Account"
+	                      , FormMethod.Post
+	                      , new {id = "logoutForm", @class = "navbar-form pull-right"}))
+	{
+		@Html.AntiForgeryToken()
+	}
+	
+	return;
 }
 
-@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })
-&nbsp;or&nbsp;
-@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })
+	@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new {id = "registerLink"})
+	&nbsp;
+	or &nbsp;
+	@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new {id = "loginLink"})

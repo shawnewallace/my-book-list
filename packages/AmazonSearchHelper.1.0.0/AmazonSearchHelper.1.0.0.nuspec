@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>AmazonSearchHelper</id>
+    <version>1.0.0</version>
+    <title>Amazon Search Helper</title>
+    <authors>J.Sakamoto</authors>
+    <owners>J.Sakamoto</owners>
+    <licenseUrl>http://amazonsearchhelper.codeplex.com/license</licenseUrl>
+    <projectUrl>http://amazonsearchhelper.codeplex.com/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>This helper for WebMatrix and ASP.NET Web Pages allows you to easily display image of book, title, etc. from ISBN by looking up Amazone ECS on your ASP.NET Web site.
+      Amazon ECS を使って ISBN から本の表紙画像やタイトルなどを取得する機能をあなたの ASP.NET Webサイトに容易に追加することのできる、WebMatrix および ASP.NET Web Pages 用のヘルパーです。</description>
+    <summary>This helper for WebMatrix and ASP.NET Web Pages allows you to easily display image of book, title, etc. from ISBN by looking up Amazone ECS on your ASP.NET Web site.      Amazon ECS を使って ISBN から本の表紙画像やタイトルなどを取得する機能をあなたの ASP.NET Webサイトに容易に追加することのできる、WebMatrix および ASP.NET Web Pages 用のヘルパーです。</summary>
+    <tags>Amazon ISBN WebMatrix aspnetwebpages</tags>
+  </metadata>
+</package>

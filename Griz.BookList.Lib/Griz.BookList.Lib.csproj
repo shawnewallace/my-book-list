@@ -78,6 +78,10 @@
     <Compile Include="Migrations\201210301937348_AddIsReadFlagToBooks.Designer.cs">
       <DependentUpon>201210301937348_AddIsReadFlagToBooks.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201211272115053_AddedBeginAndEndReadDates.cs" />
+    <Compile Include="Migrations\201211272115053_AddedBeginAndEndReadDates.Designer.cs">
+      <DependentUpon>201211272115053_AddedBeginAndEndReadDates.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Book.cs" />
     <Compile Include="Models\UserProfile.cs" />
     <Compile Include="Migrations\201209172344536_InitialCreate.cs" />
@@ -107,6 +111,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201210301937348_AddIsReadFlagToBooks.resx">
       <DependentUpon>201210301937348_AddIsReadFlagToBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201211272115053_AddedBeginAndEndReadDates.resx">
+      <DependentUpon>201211272115053_AddedBeginAndEndReadDates.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
