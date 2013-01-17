@@ -8,5 +8,11 @@ namespace Griz.BookList.Lib.Models
 	{
 		[Column("user_name")]
 		public string UserName { get; set; }
+
+		[Column("is_admin")]
+		public bool IsAdmin { get; set; }
+
+		[Column("is_active")]
+		public bool IsActive { get; set; }
 	}
 }

@@ -20,9 +20,15 @@ namespace Griz.BookList.Lib.Models
 		[Column("finish_read")]
 		public DateTime? WhenFinishRead { get; set; }
 
+		[Column("author")]
+		public string Author { get; set; }
+
 		public UserProfile UserProfile { get; set; }
 
 		[NotMapped]
 		public bool IsRead { get { return WhenFinishRead.HasValue; } }
+
+		[NotMapped]
+		public bool IsReading { get { return WhenBeginRead.HasValue && !IsRead; } }
 	}
 }

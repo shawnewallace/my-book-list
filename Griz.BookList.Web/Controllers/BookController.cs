@@ -80,6 +80,24 @@ namespace Griz.BookList.Web.Controllers
 			return Json(true);
 		}
 
+		public JsonResult ToggleRead(int id)
+		{
+			var profileId = CurrentUser.Id;
+
+			if (!BookOwnedByProfile(id, profileId)) return Json(false);
+
+			var book = BookRepository.GetById(id);
+
+			if (book.IsNullOrEmpty()) return Json(false);
+
+			if (!book.WhenBeginRead.HasValue) book.WhenBeginRead = DateTimeHelper.Now;
+			else if (!book.WhenFinishRead.HasValue) book.WhenFinishRead = DateTimeHelper.Now;
+
+			BookRepository.UnitOfWork.Commit();
+
+			return Json(true);
+		}
+
 		private List<Lib.Models.Book> MoveBookInList(int id
 			, int newPosition
 			, List<Lib.Models.Book> oldList)

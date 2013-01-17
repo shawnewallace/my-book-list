@@ -1,16 +1,43 @@
-﻿@model Griz.BookList.Lib.Models.Book
+﻿@using Griz.Core
+@model Griz.BookList.Lib.Models.Book
 
 <div class="book-in-list">
-	@Model.Name
+	<span class="book-title">@Model.Name</span>
+	
+	@if (Model.IsReading)
+	{
+		<br /><span class="reading-indicator">Reading since @Model.WhenBeginRead.Value.ToShortDateString()</span>
+	}
+	
+	@if (Model.Author.IsNotNullOrEmpty())
+	{
+		<br />
+		<span class="book-author">@Model.Author</span>
+	}
+
 	<div class="btn-group pull-right">
 		<button class="btn btn-mini dropdown-toggle" data-toggle="dropdown">
 			<span class="caret"></span>
 		</button>
 		<ul class="dropdown-menu">
-			<li><a href="#" class="disabled" data-id="@Model.Id">Start/Finish Reading</a></li>
-			<li><a href="#" class="" data-id="@Model.Id">Edit</a></li>
-			<li><a href="#" class="" data-id="@Model.Id">Purchase</a></li>
-			<li><a href="#" class="" data-id="@Model.Id">Move</a></li>
+			@if(!Model.IsRead)
+			{
+			<li>
+				<a href="#" class="start-finish-reading-button" data-id="@Model.Id">
+					@if (Model.IsReading)
+					{
+						<span>Finish Reading</span>
+					}
+					else
+					{
+						<span>Start Reading</span>
+					}
+				</a>
+			</li>
+			}
+			<li><a href="#" class="disabled" data-id="@Model.Id">Edit</a></li>
+			<li><a href="#" class="disabled" data-id="@Model.Id">Purchase</a></li>
+			<li><a href="#" class="disabled" data-id="@Model.Id">Move</a></li>
 			<li class="divider"></li>
 			<li><a href="#" class="remove-book-button" data-id="@Model.Id">Remove</a></li>
 		</ul>

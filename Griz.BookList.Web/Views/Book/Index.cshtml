@@ -24,29 +24,36 @@
 
 @section scripts{
 	<script type="text/javascript">
-		$(document).ready(function () {
-			$(".remove-book-button").live("click", function () {
+		$(document).ready(function() {
+			$(".start-finish-reading-button").live("click", function() {
+				var id = $(this).attr("data-id");
+				$.ajax({
+					url: "/book/ToggleRead?id=" + id,
+					type: "DELETE"
+				});
+			});
+
+			$(".remove-book-button").live("click", function() {
 				var id = $(this).attr("data-id");
 				$.ajax({
 					url: "/book/delete?id=" + id,
 					type: "DELETE"
-				}).done(function (data) {
+				}).done(function(data) {
 					if (data == true) {
 						$("li[data-id=" + id + "]").fadeOut("slow");
 						$("li[data-id=" + id + "]").remove();
-					}
-					else {
+					} else {
 						alert("bad");
 					}
 				});
 			});
 
 			$("#sortable").sortable({
-				update: function (event, ui) {
+				update: function(event, ui) {
 					$.ajax({
 						url: "/book/update?id=" + $(ui.item).attr("data-id") + "&pos=" + ui.item.index(),
 						type: "POST"
-					}).done(function () {
+					}).done(function() {
 						//alert("done");
 					});
 				}

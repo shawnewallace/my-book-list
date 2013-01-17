@@ -82,6 +82,14 @@
     <Compile Include="Migrations\201211272115053_AddedBeginAndEndReadDates.Designer.cs">
       <DependentUpon>201211272115053_AddedBeginAndEndReadDates.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201211291323532_AddedAuthorToBook.cs" />
+    <Compile Include="Migrations\201211291323532_AddedAuthorToBook.Designer.cs">
+      <DependentUpon>201211291323532_AddedAuthorToBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201211302023526_AddIsActiveAndIsAdminToProfile.cs" />
+    <Compile Include="Migrations\201211302023526_AddIsActiveAndIsAdminToProfile.Designer.cs">
+      <DependentUpon>201211302023526_AddIsActiveAndIsAdminToProfile.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Book.cs" />
     <Compile Include="Models\UserProfile.cs" />
     <Compile Include="Migrations\201209172344536_InitialCreate.cs" />
@@ -114,6 +122,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201211272115053_AddedBeginAndEndReadDates.resx">
       <DependentUpon>201211272115053_AddedBeginAndEndReadDates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201211291323532_AddedAuthorToBook.resx">
+      <DependentUpon>201211291323532_AddedAuthorToBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201211302023526_AddIsActiveAndIsAdminToProfile.resx">
+      <DependentUpon>201211302023526_AddIsActiveAndIsAdminToProfile.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
